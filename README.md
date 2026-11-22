@@ -1,17 +1,30 @@
-# 个人学习知识库
+# 学习笔记
 
-使用 VitePress 阅读和检索本地 Markdown 笔记，使用 Git 记录修改历史。课程包括嵌入式 Linux、C / C++、STM32 / DSP 和信号处理与仿真。
+使用 VitePress 阅读和检索 Markdown 笔记，使用 Git 记录修改历史。站点支持中文全文搜索、课程侧边栏、页内目录、代码高亮和数学公式。
+
+## 课程
+
+| 课程 | 学习主题 |
+| --- | --- |
+| [嵌入式 Linux](docs/linux/index.md) | 开发环境、文件 I/O、事件监听和进程 |
+| [C / C++](docs/cpp/index.md) | 编译调试、指针、对象生命周期和内存管理 |
+| [STM32 / DSP](docs/embedded/index.md) | 开发调试、外设、ADC 和数字信号处理实践 |
+| [信号处理与仿真](docs/signal/index.md) | 离散信号、采样、频域分析和仿真 |
+
+当前包含四门课程的学习路线，以及两页用于验证代码和公式渲染的演示。
 
 ## 在 Windows 上运行
 
-在项目根目录打开 PowerShell。需要 Node.js 22 或更高版本、随 Node.js 提供的 npm，以及 Git。可以用 VS Code 编辑文件。
+需要 Node.js 22 或更高版本、npm 和 Git。首次使用时，在 PowerShell 中克隆仓库并启动。
 
 ```powershell
+git clone https://github.com/R1CHARDZZZ/study-notes.git
+Set-Location study-notes
 npm.cmd ci
 npm.cmd run docs:dev
 ```
 
-首次安装或依赖变更后运行 `npm.cmd ci`。打开终端显示的本地地址，通常是 `http://127.0.0.1:5173/`。开发服务会自动刷新页面，按 `Ctrl+C` 停止。这里使用 `npm.cmd`，以兼容限制执行 PowerShell 脚本的环境。
+也可以从 [Gitee](https://gitee.com/r1chardzzz/study-notes) 克隆。已有本地副本时，直接在项目根目录运行 `npm.cmd run docs:dev`。打开终端显示的地址，通常是 `http://127.0.0.1:5173/`。按 `Ctrl+C` 停止服务。
 
 ```powershell
 npm.cmd run docs:build
@@ -27,4 +40,6 @@ npm.cmd run docs:preview
 3. 将图片放到 `docs/public/images/<课程>/`，在正文中用 `/images/<课程>/文件名` 引用。
 4. 运行 `npm.cmd run docs:build` 和 `git diff --check`，检查页面和差异后提交。
 
-嵌入式 Linux 课程的两页演示可用于检查章节切换、页内目录、语法高亮和公式。可在搜索框输入「语法高亮」检查中文正文搜索。
+## 仓库同步
+
+[GitHub](https://github.com/R1CHARDZZZ/study-notes) 和 [Gitee](https://gitee.com/r1chardzzz/study-notes) 都是公开仓库。维护时先在本地提交，再将同一个 `main` 分别推送至两个远端。推送前检查提交内容，个人草稿留在 `inbox/`。
