@@ -39,11 +39,21 @@ npm.cmd run docs:preview
 
 ## 维护笔记
 
-1. 把原始草稿保存到项目根目录的 `inbox/`。该目录由 Git 忽略，从其他副本还原时可自行创建。
-2. 检索相应课程目录，优先补充已有章节。新增章节时，同步更新课程首页和 `docs/.vitepress/config.mts` 中的导航。
+课程笔记以 `docs/` 中的 Markdown 为准。VitePress 负责阅读和检索，Git 保留修订历史，Agent 根据本次提供的材料整理内容。
+
+1. 提供需要整理的学习记录、代码、典型疑问和已确认结论。原始草稿可放在 `inbox/`，该目录由 Git 忽略，新设备上可按需创建。
+2. 先查找相应课程，优先补充已有章节。新增或移动章节时，同步更新课程首页、导航及站内链接。
 3. 将图片放到 `docs/public/images/<课程>/`，在正文中用 `/images/<课程>/文件名` 引用。
-4. 运行 `npm.cmd run docs:build` 和 `git diff --check`，检查页面和差异后提交。
+4. 运行 `npm.cmd run docs:build` 和 `git diff --check`，复核关键结论、示例和待验证事项，再决定是否提交。
+
+### 交给新的 Agent
+
+先让 Agent 阅读 [项目规则](AGENTS.md)和[知识归纳流程](skills/knowledge-curation/SKILL.md)，再提供本次任务的材料。规则和流程随仓库保存，新 Agent 可通过文件路径直接读取。
+
+> 请先读 README.md、AGENTS.md 和 skills/knowledge-curation/SKILL.md，再根据我提供的材料整理笔记。先查找已有章节，优先增量更新，检查导航与链接，运行构建并报告待核查内容。只有在我明确要求时才提交、推送或部署。
+
+换电脑时，获取仓库副本后按上面的 Windows 步骤安装依赖。尚未归档的聊天、草稿和实验记录需要另行提供。
 
 ## 仓库同步
 
-[GitHub](https://github.com/R1CHARDZZZ/study-notes) 和 [Gitee](https://gitee.com/r1chardzzz/study-notes) 都是公开仓库。维护时先在本地提交，再将同一个 `main` 分别推送至两个远端。推送前检查提交内容，个人草稿留在 `inbox/`。
+GitHub 和 Gitee 都是公开仓库。确认需要同步时，将同一个本地 `main` 提交分别推送到两个远端。个人草稿留在 `inbox/`，推送前检查提交内容。[GitHub](https://github.com/R1CHARDZZZ/study-notes) · [Gitee](https://gitee.com/r1chardzzz/study-notes)
