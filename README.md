@@ -11,7 +11,7 @@
 | [STM32 / DSP](docs/embedded/index.md) | 开发调试、外设、ADC 和数字信号处理实践 |
 | [信号处理与仿真](docs/signal/index.md) | 离散信号、采样、频域分析和仿真 |
 
-当前包含四门课程的学习路线，以及两页用于验证代码和公式渲染的演示。
+嵌入式 Linux 已整理入门、工具链、文件 I/O、多路复用与进程基础教程。其余课程提供学习路线，站点演示可用于检查代码和公式渲染。
 
 ## 在 Windows 上运行
 
@@ -24,7 +24,11 @@ npm.cmd ci
 npm.cmd run docs:dev
 ```
 
-也可以从 [Gitee](https://gitee.com/r1chardzzz/study-notes) 克隆。已有本地副本时，直接在项目根目录运行 `npm.cmd run docs:dev`。打开终端显示的地址，通常是 `http://127.0.0.1:5173/`。按 `Ctrl+C` 停止服务。
+也可以从 [Gitee](https://gitee.com/r1chardzzz/study-notes) 克隆。安装依赖后，双击项目根目录的 [open-notes.vbs](open-notes.vbs)，即可在后台启动站点并打开默认浏览器。也可以为这个脚本创建自己的快捷方式。关闭网页后服务会继续在本机运行，下次打开可以直接复用。
+
+需要查看启动日志时，可双击 [start-notes.cmd](start-notes.cmd) 使用带窗口的启动方式。在该窗口按 `Q` 可停止由它启动的服务。
+
+也可以从 PowerShell 运行 `npm.cmd run docs:dev`，打开终端显示的地址，通常是 `http://127.0.0.1:5173/`。
 
 ```powershell
 npm.cmd run docs:build

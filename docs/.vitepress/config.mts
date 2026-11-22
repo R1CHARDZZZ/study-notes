@@ -5,8 +5,23 @@ const courses: { text: string; link: string; chapters?: DefaultTheme.SidebarItem
     text: '嵌入式 Linux',
     link: '/linux/',
     chapters: [
-      { text: '代码块演示', link: '/linux/01-code-demo' },
-      { text: '数学公式演示', link: '/linux/02-math-demo' }
+      { text: '嵌入式 Linux 整体认识', link: '/linux/01-linux-introduction' },
+      { text: '终端命令与基本操作', link: '/linux/02-terminal-commands' },
+      { text: 'Linux C 开发与编译调试', link: '/linux/03-development-toolchain' },
+      { text: '文件描述符与文件 I/O', link: '/linux/04-file-descriptors-and-io' },
+      { text: '文件偏移与 lseek', link: '/linux/05-lseek-and-errors' },
+      { text: '阻塞与非阻塞 I/O', link: '/linux/06-blocking-and-nonblocking' },
+      { text: 'I/O 多路复用', link: '/linux/07-select-poll-epoll' },
+      { text: '进程基础', link: '/linux/08-process-introduction' },
+      { text: '文件接口延伸', link: '/linux/09-io-extensions' },
+      {
+        text: '站点演示',
+        collapsed: true,
+        items: [
+          { text: '代码块演示', link: '/linux/01-code-demo' },
+          { text: '数学公式演示', link: '/linux/02-math-demo' }
+        ]
+      }
     ]
   },
   { text: 'C / C++', link: '/cpp/' },
